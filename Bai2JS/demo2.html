@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <script type="text/JavaScript">
+      function changeColor(choose) {
+        var txt = document.getElementById("test")
+        if (choose == 1) {// "onFocus" lúc kích chuotj vào  
+            
+            txt.style.border = "solid 4px red";
+       
+        }else{ //"onBlur" lúc kích chuột ra ngaoif
+            txt.style.border = "solid 1px gray"
+        }
+      }
+
+      function changeColorButton(thamso) {
+        var nut = document.getElementById("nut")
+        if (thamso == 1 ) {// hover "onMouseOver" đưa chuột vào
+            nut.style.backgroundColor = "red"
+        }else if (thamso == 2 ){ // out "onMouseOut" đưa chuột ra ngoài
+            nut.style.backgroundColor = "white"
+        }else if (thamso == 3){  //down "onMouseDown" Kích  Chuột vào
+            nut.style.backgroundColor = "green"
+        }else{  //up " onmouseup" Kích xong
+            nut.style.backgroundColor = "yellow"
+        }
+      }
+
+      function thayDoiChon() { //"onchange"
+        var theP = document.getElementById("xuat");
+        var dropdown = document.getElementById("chon");
+      theP.innerHTML = dropdown.value;
+    }
+     function LayGiaTri(){// tìm giá  trị theo id
+        var theP = document.getElementById("noidung");
+        theP.innerHTML = "Xin Chào"
+        theP.style.color = "red";
+
+     }
+
+
+     function LayGiaTriTheP2() {// tìm thẻ p
+        var tatcaP= document.getElementsByTagName("p");
+        alert("Số Thẻ p: " + tatcaP.length +  " Nội Dung: " + tatcaP[3].innerHTML)
+     }
+
+
+     function LayGiaTriClass() {
+        var tatcaP= document.getElementsByClassName("demo");
+        alert("Số Thẻ p: " + tatcaP.length +  " Nội Dung: " + tatcaP[0].innerHTML)
+     }
+  </script>
+  <body>
+      <input id="test" type="text" onfocus="changeColor(1)" onblur="changeColor(2)">
+      <button id="nut" onmouseover="changeColorButton(1)" 
+                       onmouseout="changeColorButton(2)"
+                       onmousedown="changeColorButton(3)"
+                       onmouseup="changeColorButton(4)"> Đổi Màu</button>
+     
+    <p id="xuat"></p>
+      <select name="" id="chon" onchange="thayDoiChon()">
+        <option >VietNam</option>
+        <option >USA</option>
+        <option >Phap</option>
+      </select>
+
+
+      <p id="noidung"></p>
+      <input type="button" name="" value="lấy giá trị" onclick="LayGiaTri()">
+        
+
+      <p> Thẻ 1</p>
+      <p>Thẻ 2</p>
+      <p>Thẻ 3</p>
+      <input type="button" name="" value="lấy giá trị P" onclick="LayGiaTriTheP2()">
+
+      <p class="demo">Class 1</p>
+      <p class="demo">Class 2</p>
+      <p class="demo">Class 3</p>
+      <input type="button" name="" value="lấy giá trị Class" onclick="LayGiaTriClass()">
+       
+      <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>

@@ -1,0 +1,14 @@
+
+a:link{/*chưa kích vào*/
+    color: red;
+    font-size: 40px;
+}
+a:visited{/*dã kích vào*/
+    color: rgb(0, 0, 0);
+}
+a:hover {/*đưa chuột vào đổi màu*/
+    color: rgb(31, 132, 18);
+}
+a:active{/*kích vào đổi màu*/
+    color: brown;
+}

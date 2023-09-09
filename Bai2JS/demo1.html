@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+   <script type="text/JavaScript">
+        function KiemTra(giatri) {
+            if(giatri == 8){
+                alert("Số Tám");
+            }else if(giatri == 9){
+                alert("Số 9");
+            }else{
+                alert("Sai Số"); 
+            }
+        }
+        function Diem(dtb) {
+            var thongBao= "";
+            switch (dtb) {
+                case 9:
+                    thongBao = "Giỏi"; break;
+                case 8:
+                    thongBao = "Khá"; break;
+                case 7:
+                    thongBao = "TB"; break;
+                case 6:
+                    thongBao = "YẾU"; break;        
+                default:
+                    break;
+            }
+            alert(thongBao);
+        }
+
+        function Xuat10Cau() {
+            for(i=0; i<100; i++){//vòng lập có số tối đa
+                
+                if (i % 2 != 0) { //kiểm tra điều kiện
+                    document.write("Số Lẻ " + i + "<br>");
+                } 
+            }
+           
+           
+        }
+        function VLwhile(toida) {
+            i = 0;
+            while(i < toida){//vòng lập chưa xác định số tối đa
+                document.write("Số " + i + "<br>");
+                i++;
+            }
+        }
+   </script>  
+
+</head>
+  <body>
+      <button onclick="KiemTra(9)">OK</button>
+      <button onclick="Diem(9)">Điểm</button>
+      <button onclick="Xuat10Cau()">vong lập for</button>
+      <button onclick="VLwhile(100)">vong lập while</button>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>

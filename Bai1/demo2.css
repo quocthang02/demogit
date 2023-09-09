@@ -1,0 +1,23 @@
+.demo{
+    margin-left: 300px;
+    text-align: center;
+    background: aqua;
+    height: 500px;
+    width: 700px;
+    border: solid 1px rgb(0, 0, 0);
+}
+p{
+    color: red;
+    font-weight: 900;
+    font-size: 50px;
+
+}
+h3{
+    color: green;
+    
+    
+}
+.button{
+    border: solid 1px rgb(0, 0, 0);
+    background-color: brown;
+}
